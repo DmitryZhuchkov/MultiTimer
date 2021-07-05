@@ -182,12 +182,13 @@ final class ViewController: UIViewController, UITableViewDataSource, UITableView
             cell.createTimer()
           }
         }
+         self.timerArray = self.timeArray.filter { $0.time < $ $1.time}
+         timerList.reloadData()
       }
     func deleteTimer(indexPath: IndexPath) {
         timerList.beginUpdates()
         timerList.deleteRows(at: [indexPath], with: .fade)
 //        timerArray.remove(at: indexPath.row )
-        print(timerArray.count)
         timerList.endUpdates()
       }
     
