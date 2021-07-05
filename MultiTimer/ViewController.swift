@@ -29,7 +29,6 @@ final class ViewController: UIViewController, UITableViewDataSource, UITableView
         timerList.deleteRows(at: [indexPath], with: .automatic)
             
         }
-        print(cell.time?.time)
         cell.configure()
         return cell
     }
